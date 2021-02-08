@@ -1,0 +1,40 @@
+@import './colors.scss';
+@import './typography.scss';
+
+.header {
+    padding: 20px  120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    .brand {
+        font-family: $montserrat;
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 0px;
+            color: $color20;
+        }
+        h2 {
+            font-size: 22px;
+            margin-top: -5px;
+            color: $color19;
+        }
+    }
+
+    .btn {
+        cursor: pointer;
+        box-shadow: 1px 0 0.4em $color21;
+        background-color: $color21;
+        color: $color10;
+        font-family: $roboto;
+        padding: 10px 40px;
+        font-size: 18px;
+        font-weight: 500;
+        display: inline-block;
+        border-radius: 4px;
+        border: none;
+        
+    }
+}
