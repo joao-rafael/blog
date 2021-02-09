@@ -3,7 +3,7 @@ import Link from 'next/link'
 import fs from 'fs';
 import styles from '../styles/Layout.module.scss'
 
-export const Home = ({slugs}) => {
+export default function Home({ posts }) {
   return (
     <div>
       <Head>
@@ -19,25 +19,38 @@ export const Home = ({slugs}) => {
             <h2 className={styles.sub}>Insights about Technology, Programming and life itself.</h2>
           </div>
           <picture className={styles.pic}>
-            <img src="./images/bg.png" alt="Background"/>
+            <img src="./images/bg.png" alt="Background" />
           </picture>
         </div>
         <Link href='/hello'>
           <a>
-            Go to hello
+                        Go to hello
           </a>
         </Link>
       </section>
       <section className={styles.postlist}>
-
+        {
+          posts.map(slug => {
+            console.log(slug);
+            return (
+              <Link href={slug} key={slug}>
+                <article>
+                  <h3>
+                    {slug}
+                  </h3> 
+                </article> 
+              </Link>
+            )
+          })
+        }
       </section>
-        
+
     </div>
-  )
+  );
 }
 
 export const getStaticProps = async () => {
-  const files = fs.readdirSync('posts');
+  const files = await fs.readdirSync('posts');
   return {
     props: {
       posts: files.map(fileName => fileName.replace('.md', ''))

@@ -1249,6 +1249,11 @@ lodash.sortby@^4.7.0:
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
 
+lodash.startswith@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/lodash.startswith/-/lodash.startswith-4.2.1.tgz#c598c4adce188a27e53145731cdc6c0e7177600c"
+  integrity sha1-xZjErc4YiiflMUVzHNxsDnF3YAw=
+
 lodash@^4.17.13:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
@@ -1274,6 +1279,13 @@ make-dir@^3.0.2:
   integrity sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==
   dependencies:
     semver "^6.0.0"
+
+marked-images@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/marked-images/-/marked-images-2.2.1.tgz#97ae18394717602235231c0abb93e74e5128a8dc"
+  integrity sha512-fgtuKhI7zkpMEz8MACV+q6a0OnL+BiYd5yLquqXfX/+E+FB/xjweoeE1+ruQmgGxcfXHCtZBtvq1l0ssqHIC3Q==
+  dependencies:
+    lodash.startswith "^4.2.1"
 
 marked@^2.0.0:
   version "2.0.0"

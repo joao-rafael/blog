@@ -1,0 +1,61 @@
+@import './colors.scss';
+@import './typography.scss';
+
+.post {
+    font-weight: bold;
+    margin: 0px  120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-family: $roboto;
+        font-weight: 400;
+        color: $color20;
+        width: 70%;
+        line-height: 140%;
+
+        img {
+            border-radius: 8px;
+            max-height: 300px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &:first-of-type {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    pre {
+        font-weight: 400;
+        line-height: 130%;
+        color: $color10;
+        border-radius: 8px;
+        background: $color18;
+        width: 70%;
+        padding: 20px 30px 20px 30px;
+    }
+
+    h1{
+        text-align: center;
+        font-family: $montserrat;
+        font-weight: bold;
+        font-size: 38px;
+        color: $color20;
+    }
+}
+
+.link {
+    
+    a {
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid;
+        cursor: pointer;
+    }
+}

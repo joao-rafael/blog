@@ -10,6 +10,7 @@
   "dependencies": {
     "gray-matter": "^4.0.2",
     "marked": "^2.0.0",
+    "marked-images": "^2.2.1",
     "next": "10.0.6",
     "next-images": "^1.7.0",
     "react": "17.0.1",
