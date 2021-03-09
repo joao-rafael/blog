@@ -17,16 +17,24 @@
         line-height: 140%;
 
         img {
-            border-radius: 8px;
-            max-height: 300px;
+            position: absolute;
+            left: 0;
+            border-radius: 0px;
+            max-height: 400px;
             width: 100%;
             object-fit: cover;
             object-position: center;
+
+            &:first-of-type {
+                width: 100%;
+                margin-top: -400px;
+                margin-bottom: 0;
+            }
         }
 
         &:first-of-type {
             width: 100%;
-            margin-top: 0;
+            margin-top: 400px;
             margin-bottom: 0;
         }
     }

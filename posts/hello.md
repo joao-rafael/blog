@@ -1,8 +1,9 @@
 ---
-title: Hello Next.js
-description: This is my first blog post
+title: Hello, World!
+date: March 4, 2021
+description: This is my first blog post!
 ---
-![alt text](./images/bg.png)
+![alt text](./images/hello.jpg)
 
 # Hello World
 

@@ -1,6 +1,8 @@
+import fs from 'fs';
+import matter from 'gray-matter';
 import Head from 'next/head'
 import Link from 'next/link'
-import fs from 'fs';
+import path from 'path';
 import styles from '../styles/Layout.module.scss'
 
 export default function Home({ posts }) {
@@ -27,30 +29,43 @@ export default function Home({ posts }) {
                         Go to hello
           </a>
         </Link>
+        <section className={styles.postlist}>
+          {
+            posts.map(slug => {
+              console.log(posts.length);
+              const markdown = fs.readFileSync(path.join('posts', slug + '.md')).toString();
+              const parsedMarkdown = matter(markdown);
+              const data = parsedMarkdown.data;
+
+              return (
+                <Link href={slug} key={slug}>
+                  <article className={styles.postCard}>
+                    <h2>
+                      {data.date}
+                    </h2>
+                    <h2>
+                      {data.title}
+                    </h2> 
+                    <p>
+                      {data.description}
+                    </p>
+                  </article> 
+                </Link>
+              )
+            })
+          }
+        </section>
       </section>
-      <section className={styles.postlist}>
-        {
-          posts.map(slug => {
-            console.log(slug);
-            return (
-              <Link href={slug} key={slug}>
-                <article>
-                  <h3>
-                    {slug}
-                  </h3> 
-                </article> 
-              </Link>
-            )
-          })
-        }
-      </section>
+     
 
     </div>
   );
 }
 
 export const getStaticProps = async () => {
+  console.log('executed');
   const files = await fs.readdirSync('posts');
+  console.log('files: ' + files);
   return {
     props: {
       posts: files.map(fileName => fileName.replace('.md', ''))

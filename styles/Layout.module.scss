@@ -75,6 +75,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    @media screen and (min-width:  1200px){
+        margin: 0px calc(120px + 10%);
+    }
 }
 
 
@@ -109,7 +113,22 @@
 }
 
 .postlist {
+    width: 100%;
+    border: 2px solid;
 
+    .postCard {
+        h2 {
+            display: block;
+            border: 2px solid;
+            font-family: $montserrat;
+            color: $color20;
+            font-weight: 500;
+    
+            span {
+                font-weight: 700;
+            }
+        }
+    }
 }
 
 .code {

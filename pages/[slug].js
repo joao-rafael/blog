@@ -7,6 +7,7 @@ import path from 'path';
 import styles from '../styles/Post.module.scss'
 
 const Post = ({htmlStr, data}) => {
+    console.log(data);
     return (
         <>  
             <Head>
@@ -15,7 +16,7 @@ const Post = ({htmlStr, data}) => {
             <div dangerouslySetInnerHTML={{__html: htmlStr}} className={styles.post}>
                
             </div>
-            a
+            
             <Link href='/' className={styles.link}>
                 <a>
                     go back
