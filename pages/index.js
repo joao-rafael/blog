@@ -1,6 +1,6 @@
-import fs from 'fs';
 import matter from 'gray-matter';
 import Head from 'next/head'
+import Card from '../components/Card';
 import Link from 'next/link'
 import path from 'path';
 import styles from '../styles/Layout.module.scss'
@@ -30,12 +30,37 @@ export default function Home({ posts }) {
           </a>
         </Link>
         <section className={styles.postlist}>
-          {
+          <Card title='Hello World!' date='March 12, 2021' description='this is my first blog post!' link='/hello'>
+          </Card>
+          <Card title='Making Computer Graphics Experiments' date='March 12, 2021' description='One good description' link='/hello'>
+          </Card>
+        </section>
+      </section>
+     
+
+    </div>
+  );
+}
+
+/*
+export const getStaticProps = async () => {
+  console.log('executed');
+  const files = await fs.readdirSync('posts');
+  const markdown = fs.readFileSync(path.join('posts', slug + '.md')).toString();
+  const parsedMarkdown = matter(markdown);
+  const data = parsedMarkdown.data;
+  console.log('files: ' + files);
+  return {
+    props: {
+      posts: files.map(fileName => fileName.replace('.md', ''))
+    }
+  }
+}
+
+ {
             posts.map(slug => {
               console.log(posts.length);
-              const markdown = fs.readFileSync(path.join('posts', slug + '.md')).toString();
-              const parsedMarkdown = matter(markdown);
-              const data = parsedMarkdown.data;
+             
 
               return (
                 <Link href={slug} key={slug}>
@@ -54,21 +79,4 @@ export default function Home({ posts }) {
               )
             })
           }
-        </section>
-      </section>
-     
-
-    </div>
-  );
-}
-
-export const getStaticProps = async () => {
-  console.log('executed');
-  const files = await fs.readdirSync('posts');
-  console.log('files: ' + files);
-  return {
-    props: {
-      posts: files.map(fileName => fileName.replace('.md', ''))
-    }
-  }
-}
+*/
