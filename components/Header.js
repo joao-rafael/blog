@@ -13,7 +13,7 @@ const Header = () => {
                 </Link>
             </div>
             <button className={styles.btn}>
-                Contact-me
+                Contact
             </button>
         </header>
     )

@@ -1,6 +1,7 @@
 @import './typography.scss';
 @import './colors.scss';
 
+
 .welcome {
     position: relative;
     display: block;
@@ -115,6 +116,7 @@
 .postlist {
     margin-top: 30px;
     width: 80%;
+    max-width: 700px;
 }
 
 .code {
