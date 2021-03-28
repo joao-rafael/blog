@@ -4,8 +4,9 @@ import Card from '../components/Card';
 // import fs from 'fs';
 import path from 'path';
 import styles from '../styles/Layout.module.scss'
+import fs from 'fs';
 
-export default function Home({ postData }) {
+export default function Home({ postProps}) {
   return (
     <div>
       <Head>
@@ -25,6 +26,11 @@ export default function Home({ postData }) {
           </picture>
         </div>
         <section className={styles.postlist}>
+          {
+            postProps.map(post => {
+              console.log(post);
+            })
+          }
           <Card title='Hello World!' date='March 12, 2021' description='this is my first blog post!' link='/hello'>
           </Card>
           <Card title='Making Computer Graphics Experiments' date='March 12, 2021' description='One good description' link='/hello'>
@@ -41,7 +47,40 @@ export default function Home({ postData }) {
   );
 }
 
+export const getStaticPaths = async () => {
 
+  const files = fs.readdirSync('posts');
+  const paths = files.map(filename => ({
+      params: {
+          slug: filename.toString()
+      }
+  }));
+  console.log(paths);
+  return {
+      paths,
+      fallback: false
+  }
+}
+
+export const getStaticProps = async (paths) => {
+  
+  const postList = Object.entries(paths.params.slug);
+  console.log(postList);
+
+  const postProps = postList.map(post => {
+    const markdown =  fs.readFileSync(path.join('posts', post)).toString();
+    const parsedMarkdown = matter(markdown);
+    
+    return {
+      data: parsedMarkdown.data
+    }
+  })
+
+
+  return {
+    props: postProps
+  }
+}
 
 /*
  {
