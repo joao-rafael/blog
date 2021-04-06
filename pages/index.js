@@ -52,12 +52,27 @@ export default function Home({ slugs }) {
   );
 }
 
+export const getAllPosts = async () => {
+
+}
+
 export const getStaticProps = async () => {
   const files = fs.readdirSync("posts");
 
+  const markdowns = [];
+
+  files.map(file => {
+    const entry = fs.readFileSync(path.join('posts', file)).toString();
+    const parsedMarkdown = matter(entry);
+    console.log(parsedMarkdown.data)
+    markdowns.push(parsedMarkdown.data);
+  })
+
+  
+
   return {
     props: {
-      slugs: files.map(filename => filename.replace(".md", ""))
+      slugs: markdowns
     }
   };
 };
