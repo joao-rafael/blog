@@ -7,7 +7,7 @@ import path from 'path';
 import styles from '../styles/Layout.module.scss'
 import fs from 'fs';
 
-export default function Home({ slugs }) {
+export default function Home({ files }) {
   return (
     <div>
       <Head>
@@ -27,23 +27,12 @@ export default function Home({ slugs }) {
           </picture>
         </div>
         <section className={styles.postlist}>
-          {slugs.map(slug => {
+          {files.map((file)=> {
             return (
-              <div key={slug}>
-                <Link href={"/" + slug}>
-                  <a>{"/" + slug}</a>
-                </Link>
-              </div>
+              <Card title={file.title} date={file.date} description={file.description} link={`/${file.slug}`} key={file.slug}>
+              </Card>
             );
           })}
-          <Card title='Hello World!' date='March 12, 2021' description='this is my first blog post!' link='/hello'>
-          </Card>
-          <Card title='Making Computer Graphics Experiments' date='March 12, 2021' description='One good description' link='/hello'>
-          </Card>
-          <Card title='Making Computer Graphics Experiments' date='March 12, 2021' description='One good description' link='/hello'>
-          </Card>
-          <Card title='Making Computer Graphics Experiments' date='March 12, 2021' description='One good description' link='/hello'>
-          </Card>
         </section>
       </section>
      
@@ -64,57 +53,12 @@ export const getStaticProps = async () => {
   files.map(file => {
     const entry = fs.readFileSync(path.join('posts', file)).toString();
     const parsedMarkdown = matter(entry);
-    console.log(parsedMarkdown.data)
     markdowns.push(parsedMarkdown.data);
   })
 
-  
-
   return {
     props: {
-      slugs: markdowns
+      files: markdowns
     }
   };
 };
-
-
-/*
- {
-
-  export const getStaticProps = async () => {
-  console.log('executed');
-  const files = await fs.readdirSync('posts');
-  const data = []; 
-  files.map(file => {
-    const markdown = fs.readFileSync(file.toString());
-  })
-  const parsedMarkdown = matter(markdown);
-  const data = parsedMarkdown.data;
-  console.log('files: ' + files);
-  return {
-    props: {
-      postData: files.map(fileName => fileName.replace('.md', ''))
-    }
-  }
-            posts.map(slug => {
-              console.log(posts.length);
-             
-
-              return (
-                <Link href={slug} key={slug}>
-                  <article className={styles.postCard}>
-                    <h2>
-                      {data.date}
-                    </h2>
-                    <h2>
-                      {data.title}
-                    </h2> 
-                    <p>
-                      {data.description}
-                    </p>
-                  </article> 
-                </Link>
-              )
-            })
-          }
-*/

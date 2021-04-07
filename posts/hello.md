@@ -1,5 +1,6 @@
 ---
 title: Hello, World!
+slug: hello
 date: March 4, 2021
 description: This is my first blog post!
 ---
