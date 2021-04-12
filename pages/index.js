@@ -41,10 +41,6 @@ export default function Home({ files }) {
   );
 }
 
-export const getAllPosts = async () => {
-
-}
-
 export const getStaticProps = async () => {
   const files = fs.readdirSync("posts");
 

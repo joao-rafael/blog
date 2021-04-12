@@ -59,6 +59,34 @@
             left: 0;
         }
     }
+
+    @media screen and (max-width: 600px) {
+        border-radius: 0px;
+
+        .content {
+            padding: 10px 20px;
+            border-radius: 0px;
+
+            .title {
+                display: none;
+            }
+    
+            .sub {
+                text-align: center;
+                font-size: 18px;
+                font-weight: 400;
+                color: $color10;
+                font-family: $roboto;
+            }
+        }
+
+        .pic {
+
+            img {
+                border-radius: 0px;
+            }
+        }
+    }
 }
 
 .title {
@@ -79,6 +107,14 @@
 
     @media screen and (min-width:  1200px){
         margin: 0px calc(120px + 10%);
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 0px 30px;
+    }
+
+    @media screen and (max-width: 600px) {
+        margin: 0px 0px;
     }
 }
 
