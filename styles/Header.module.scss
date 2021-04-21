@@ -50,7 +50,11 @@
     }
 
     @media (max-width: 600px) {
-        background-color: $color20;
+        background: linear-gradient(180deg, #344A5D 50%, rgba(23, 41, 56, 0.0) 100%);
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        top: 0;
         padding: 5px 20px;
         
         .brand {
