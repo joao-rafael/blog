@@ -7,10 +7,27 @@
     border-radius: 4px;
     background-color: transparent;
     margin-bottom: 25px;
+    min-height: 100px;
     transition: .2s ease;
     position: relative;
+    display: block;
+    
+
+    .clink {
+        position: absolute;
+        padding: 10px;
+        z-index: 2;
+        width: 100%;
+        min-height: 80px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        
+    }
 
     .date {
+        z-index: 0;
         font-family: $roboto;
         letter-spacing: 2px;
         font-size: 12px;
@@ -22,6 +39,7 @@
     }
     
     .title {
+        z-index: 0;
         margin: 10px 0px 2px 0px;
         font-family: $montserrat;
         font-weight: bold;
@@ -37,9 +55,7 @@
         color: $color20;
     }
 
-    .link {
-
-    }
+    
 
     &:hover {
         cursor: pointer;
@@ -79,6 +95,16 @@
     }
 
     @media screen and (max-width: 600px) {
+        min-height: unset;
+        
+        .clink {
+            position: relative;
+            width: unset;
+            min-height: unset;
+            height: unset;
+            min-height: unset;
+        }
+
         .date {
             font-family: $roboto;
             letter-spacing: 2px;

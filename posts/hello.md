@@ -2,6 +2,7 @@
 title: Hello, World!
 slug: hello
 date: March 4, 2021
+dateiso: "2021-04-22T16:30:10.357Z"
 description: This is my first blog post!
 ---
 ![alt text](./images/hello.jpg)

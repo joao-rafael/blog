@@ -50,6 +50,7 @@ export const getStaticProps = async () => {
     const entry = fs.readFileSync(path.join('posts', file)).toString();
     const parsedMarkdown = matter(entry);
     markdowns.push(parsedMarkdown.data);
+    markdowns.sort((a,b) => new Date(b.dateiso) - new Date(a.dateiso))
   })
 
   return {

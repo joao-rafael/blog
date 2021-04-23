@@ -4,8 +4,8 @@ import Link from 'next/link'
 const  Card = ({title, date, description, link}) => {
     return (
         <article className={styles.card}>
-            <Link href={link}>
-                <a>
+            <Link href={link} >
+                <a className={styles.clink}>
                     <span className={styles.date}>{date}</span>
                     <h2 className={styles.title}>
                         {title}
