@@ -2,102 +2,216 @@
 @import './typography.scss';
 
 .post {
-    font-weight: bold;
-    margin: 0px  120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-top: 30px;
+    background: linear-gradient(180deg, rgba(241, 232, 147, 0.07) 0%, rgba(196, 196, 196, 0) 100%);
+    box-shadow: inset 0px 5px 9px -5px rgba(0, 0, 0, 0.25);
 
-    p {
-        font-family: $roboto;
-        font-weight: 400;
-        color: $color20;
-        width: 70%;
-        max-width: 700px;
-        line-height: 140%;
+    .article {
+        margin: 0px 120px;
+        min-height: calc(100vh - 200px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        
+        header {
+            width: 70%;
 
-        img {
-            position: absolute;
-            left: 0;
-            border-radius: 0px;
-            max-height: 400px;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-
-            &:first-of-type {
-                width: 100%;
-                margin-top: -400px;
-                margin-bottom: 0;
+            h1 {
+                font-family: $montserrat;
+                margin-bottom: 0px;
+                color: $color18;
+                font-weight: 900;
+                text-align: left;
+                font-size: 38px;
             }
-        }
 
-        &:first-of-type {
-            width: 100%;
-            margin-top: 400px;
-            margin-bottom: 0;
-        }
-    }
-
-    pre {
-        font-weight: 400;
-        line-height: 130%;
-        color: $color10;
-        border-radius: 8px;
-        background: $color18;
-        width: 70%;
-        padding: 20px 30px 20px 30px;
-    }
-
-    h1{
-        text-align: center;
-        font-family: $montserrat;
-        font-weight: bold;
-        font-size: 38px;
-        color: $color20;
-    }
-
-    @media screen and (max-width: 600px) {
-        margin: 0px 20px;
-        p {
-            width: 100%;
-        }
-        h1 {
-            margin-top: 0px;
-            text-align: left!important;
-            font-size: 26px;
-            margin-right: auto;
-        }
-        pre {
-            width: 100%;
-            padding: 20px 10px 20px 10px;
-        }
-        img {
-            position: absolute;
-            left: 0;
-            border-radius: 0px;
-            max-height: 400px;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-
-            &:first-of-type {
-                right: 0;
-                height: 370px;
-                width: 100vh;
+            p {
                 margin-top: 0px;
+                font-size: 20px;
+                margin-bottom: 6px;
+                color: $color17;
+                font-family: $roboto;
+            }
+
+            span {
+                font-family: $roboto;
+                letter-spacing: 2px;
+                font-size: 12px;
+                color: rgba($color10, 0.8);
+                background-color: rgba($color21, 0.8);
+                padding: 5px 4px;
+                margin-top: 0px;
+                font-weight: 500;
+                border-radius: 2px;
+            }
+        }
+
+        section {
+
+            width: 70%;
+
+            pre {
+                font-weight: 400;
+                line-height: 130%;
+                color: $color10;
+                font-size: 20px;
+                border-radius: 8px;
+                background: $color18;
+                width: 100%;
+                margin: 20px auto;
+                padding: 20px 30px 20px 30px;
+            }
+            
+            p {
+                margin-top: 20px;
+                margin-bottom: 0px;
+                color: $color20;
+                font-size: 20px;
+                letter-spacing: 0.5px;
+                line-height: 140%;
+                font-family: $roboto;
+
+                &:nth-of-type(2n){
+                    &::first-letter{
+                        color: $color20;
+                        font-weight: bold;
+                        initial-letter: 2;
+                        float: left;
+                        font-size: 55px;
+                        line-height: 25px;
+                        padding-top: 12px;
+                        padding-right: 4px;
+                        padding-left: 3px;
+                    }
+                }
+
+                &:first-of-type {
+                    img {
+                        margin-top: 10px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        height: 450px;
+                    }
+                }
+            }
+
+            img {
+                
+            }
+    
+            h1,
+            h2,
+            h3,
+            h4, 
+            h5, 
+            h6 {
+                padding-top: 20px;
+                font-size: 28px;
+                font-family: $montserrat;
+                color: $color20;
+                font-weight: bold;
+                text-align: left!important;
+                margin-right: auto;
+            }
+    
+            @media screen and (max-width: 600px) {
+                
+            }
+        }
+
+        
+        @media screen and (min-width:  1200px){
+            margin: 0px calc(120px + 10%);
+        }
+    
+        @media screen and (max-width: 768px) {
+            margin: 0px 30px;
+
+            section {
+                pre {
+                    white-space: pre-wrap;       
+                    white-space: -moz-pre-wrap;  
+                    white-space: -pre-wrap;      
+                    white-space: -o-pre-wrap;    
+                    word-wrap: break-word;  
+                }
+            }
+        }
+    
+        @media screen and (max-width: 600px) {
+            margin: 0px 25px;
+
+            header {
+                width: 100%;
+                margin-top: 380px;
+                margin-bottom: 20px;
+            }
+
+            section {
+                margin-top: 20px;
+                width: 100%;
+                margin: 0px 20px;
+    
+                p {
+                    width: 100%;
+                    letter-spacing: 1px;
+                }
+    
+                h1 {
+                    margin-top: 0px;
+                    text-align: left!important;
+                    font-size: 28px;
+                    margin-right: auto;
+                }
+    
+                h1,
+                h2,
+                h3,
+                h4, 
+                h5, 
+                h6 {
+                    font-family: $montserrat;
+                    color: $color20;
+                    font-weight: bold;
+                    text-align: left!important;
+                    margin-right: auto;
+                }
+    
+                pre {
+                    width: 100%;
+                    padding: 20px 10px 20px 10px;
+                }
+
+                img {
+                    position: absolute;
+                    left: 0;
+                    border-radius: 0px;
+                    max-height: 400px;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+    
+                    &:first-of-type {
+                        top: 0;
+                        right: 0;
+                        height: 370px;
+                        width: 100vh;
+                        margin-top: 0px;
+                    }
+                }
             }
         }
     }
-}
 
-.link {
-    
-    a {
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid;
-        cursor: pointer;
+    .link {
+        
+        a {
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid;
+            cursor: pointer;
+        }
     }
 }

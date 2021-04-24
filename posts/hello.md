@@ -7,16 +7,16 @@ description: This is my first blog post!
 ---
 ![alt text](./images/hello.jpg)
 
-# Hello World
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. placerat. Donec porttitor, neque at efficitur consequat, erat lectus elementum ante, in egestas ante nulla ut mi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. placerat. Donec porttitor, neque at efficitur consequat, erat lectus elementum ante, in egestas ante nulla ut mi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. placerat. Donec porttitor, neque at efficitur consequat, erat lectus elementum ante, in egestas ante nulla ut mi.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. placerat. Donec porttitor, neque at efficitur consequat, erat lectus elementum ante, in egestas ante nulla ut mi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. placerat. Donec porttitor, neque at efficitur consequat, erat lectus elementum ante, in egestas ante nulla ut mi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. placerat. Donec porttitor, neque at efficitur consequat, erat lectus elementum ante, in egestas ante nulla ut mi.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. placerat. Donec porttitor, neque at efficitur consequat, erat lectus elementum ante, in egestas ante nulla ut mi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. placerat. Donec porttitor, neque at efficitur consequat, erat lectus elementum ante, in egestas ante nulla ut mi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. placerat. Donec porttitor, neque at efficitur consequat, erat lectus elementum ante, in egestas ante nulla ut mi.
+Hello there! Welcome to Coding Bits, a blog dedicated to talk about technology, programming and life itself.
+This is the start of something new, I expect to write here often and I hope that the articles that I will write helps
+people.
+In the technical side, this blog is built in React.js + Next.js, it uses static page generation in order to post new
+articles without the need for a backend application programming interface.
 
 ```javascript
 console.log('hello world');
 console.log('this is my first post.');
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. placerat. Donec porttitor, neque at efficitur consequat, erat lectus elementum ante, in egestas ante nulla ut mi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. placerat. Donec porttitor, neque at efficitur consequat, erat lectus elementum ante, in egestas ante nulla ut mi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. placerat. Donec porttitor, neque at efficitur consequat, erat lectus elementum ante, in egestas ante nulla ut mi.
+## About 
+
+The source code for this website is available at [GitHub](). Feel free to fork, pull and use it as it is an open-source and free project. 
