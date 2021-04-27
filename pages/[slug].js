@@ -29,14 +29,16 @@ const Post = ({htmlStr, data}) => {
                 <section dangerouslySetInnerHTML={{__html: htmlStr}}>
                 
                 </section>
+
+                <Link href='/'>
+                    <a  className={styles.link}>
+                        go back
+                    </a>
+                </Link>
             </article>
             
             
-            <Link href='/' className={styles.link}>
-                <a>
-                    go back
-                </a>
-            </Link>
+            
         </div>
         
     )
