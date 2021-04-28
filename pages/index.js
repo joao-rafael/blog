@@ -34,6 +34,9 @@ export default function Home({ files }) {
             );
           })}
         </section>
+        <section>
+          Contact
+        </section>
       </section>
      
 
