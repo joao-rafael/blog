@@ -1,7 +1,9 @@
 import matter from 'gray-matter';
 import Head from 'next/head'
 import Card from '../components/Card';
+import Contact from '../components/Contact';
 import Link from 'next/link';
+
 // import fs from 'fs';
 import path from 'path';
 import styles from '../styles/Layout.module.scss'
@@ -9,7 +11,7 @@ import fs from 'fs';
 
 export default function Home({ files }) {
   return (
-    <div>
+    <div className={styles.home}>
       <Head>
         <title>Coding Bits</title>
         <meta name='keyword' content='web development, programming, blog'>
@@ -34,11 +36,11 @@ export default function Home({ files }) {
             );
           })}
         </section>
-        <section>
-          Contact
-        </section>
+        
       </section>
-     
+      <Contact>
+          
+      </Contact>
 
     </div>
   );
