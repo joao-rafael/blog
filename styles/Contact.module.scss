@@ -6,14 +6,14 @@
     flex-direction: column;
     width: 100%;
     padding: 25px 0px;
-    background-color: $color30;
+    background-color: $color21;
 
     .header {
         margin: 0px 120px;
 
         h2 {
             font-family: $montserrat;
-            color: $color20;
+            color: $color10;
             font-size: 36px;
         }
 
@@ -35,6 +35,23 @@
                     border-radius: 4px;
                 }
             }
+        }
+
+        .info {
+            font-family: $roboto;
+
+            h2 {
+                margin-top: 0px;
+                font-family: $roboto;
+                color: $color18;
+            }
+
+            ul {
+                li {
+                    color: $color18;
+                }
+            }
+
         }
 
         @media screen and (min-width:  1200px){

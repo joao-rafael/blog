@@ -18,6 +18,18 @@ const  Contact = () => {
                     <h2>
                         My name is <span>João Rafael</span>
                     </h2>
+                    <p>I am currently a full time masters student at UFPB</p>
+                    <ul>
+                        <li>
+                            Currently researching about HCI guidelines for accessible software aimed to people in the autism spectrum;
+                        </li>
+                        <li>
+                            Also, in my free time I study about web and mobile development, in order to build cool projects like this blog;
+                        </li>
+                        <li>
+                            Get in touch or Follow me on: 
+                        </li>
+                    </ul>
                 </div>
             </section>
         </section>
