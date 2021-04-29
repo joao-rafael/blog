@@ -8,11 +8,16 @@ const  Contact = () => {
                 <h2>About me</h2>
             </header>
             <section className={styles.flex}>
-                <div>
-
+                <div className={styles.photo}>
+                    <picture>
+                        <img src='./images/profile.png'>
+                        </img>
+                    </picture>
                 </div>
-                <div>
-                    
+                <div className={styles.info}>
+                    <h2>
+                        My name is <span>João Rafael</span>
+                    </h2>
                 </div>
             </section>
         </section>

@@ -3,17 +3,42 @@
 
 .contact {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    padding: 25px 120px;
+    padding: 25px 0px;
     background-color: $color30;
 
     .header {
-        h2 {
+        margin: 0px 120px;
 
+        h2 {
+            font-family: $montserrat;
+            color: $color20;
+            font-size: 36px;
+        }
+
+
+        @media screen and (min-width:  1200px){
+            margin: 0px calc(120px + 10%);
         }
     }
 
     .flex {
+        margin: 0px 120px;
+        display: flex;
+        flex-direction: row;
 
+        .photo {
+            width: 35%;
+            picture {
+                img {
+                    border-radius: 4px;
+                }
+            }
+        }
+
+        @media screen and (min-width:  1200px){
+            margin: 0px calc(120px + 10%);
+        }
     }
 }
