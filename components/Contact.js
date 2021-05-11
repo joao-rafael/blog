@@ -18,16 +18,36 @@ const  Contact = () => {
                     <h2>
                         My name is <span>João Rafael</span>
                     </h2>
-                    <p>I am currently a full time masters student at UFPB</p>
+                    <p>I am currently a full time masters student at UFPB, 
+                        Currently researching about HCI guidelines for accessible software aimed to people in the autism spectrum.</p>
+                    <p>
+                    Also, in my free time I study about web and mobile development, in order to build cool projects like this blog;
+                    </p>
+                    <p>
+                    Get in touch or Follow me on: 
+                    </p>
                     <ul>
                         <li>
-                            Currently researching about HCI guidelines for accessible software aimed to people in the autism spectrum;
+                            <Link href="https://www.linkedin.com/in/joao-rafael-silva/">
+                                <a>
+                                    <img src="./icons/linkedin.svg"></img>
+                                </a>
+                            </Link>
+                            
                         </li>
                         <li>
-                            Also, in my free time I study about web and mobile development, in order to build cool projects like this blog;
+                            <Link href="https://medium.com/@joao_rafael">
+                                <a>
+                                    <img src="./icons/medium.svg"></img>
+                                </a>
+                            </Link>
                         </li>
                         <li>
-                            Get in touch or Follow me on: 
+                            <Link href="https://github.com/joao-rafael">
+                                <a>
+                                    <img src="./icons/github.svg"></img>
+                                </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

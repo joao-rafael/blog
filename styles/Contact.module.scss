@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 25px 0px;
+    padding-bottom: 25px;
     background-color: $color21;
 
     .header {
@@ -30,8 +30,11 @@
 
         .photo {
             width: 35%;
+
             picture {
                 img {
+                    object-fit: cover;
+                    height: 100%;
                     border-radius: 4px;
                 }
             }
@@ -39,16 +42,57 @@
 
         .info {
             font-family: $roboto;
+            background-color: $color10;
+            border-radius: 4px;
+            padding: 20px 25px 0px 25px;
+            position: relative;
+
+            &::before {
+                height: 30px;
+                transform: rotate(45deg);
+                width: 30px;
+                background-color: $color10;
+                content: "";
+                position: absolute;
+                top: 20px;
+                left: -10px;
+            }
 
             h2 {
                 margin-top: 0px;
                 font-family: $roboto;
-                color: $color18;
+                color: $color20;
+
+                span {
+                    color: $color21;
+                }
             }
 
             ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                justify-items: center;
+                list-style-type: none;
+                padding-left: 0;
+                margin-bottom: 0px;
+
                 li {
+                    margin: 0px 0px 0px 5px;
+                    height: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        object-fit: contain;
+                        height: 20px;
+                        width: auto;
+                    }
+
                     color: $color18;
+                    margin-bottom: 5px;
                 }
             }
 

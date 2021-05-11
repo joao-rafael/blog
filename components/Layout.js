@@ -12,6 +12,9 @@ const Layout = ({children}) => {
                 <h2>
                     madeby<span>rafael</span>
                 </h2>
+                <p>
+                    developed by João Rafael under MIT License. The code for this website is avalaible at GitHub
+                </p>
             </footer>
         </div>
     )
