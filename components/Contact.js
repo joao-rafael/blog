@@ -15,18 +15,19 @@ const  Contact = () => {
                     </picture>
                 </div>
                 <div className={styles.info}>
-                    <h2>
+                    <h2 className={styles.title}>
                         My name is <span>João Rafael</span>
                     </h2>
-                    <p>I am currently a full time masters student at UFPB, 
-                        Currently researching about HCI guidelines for accessible software aimed to people in the autism spectrum.</p>
-                    <p>
-                    Also, in my free time I study about web and mobile development, in order to build cool projects like this blog;
+                    <p className={styles.text}>
+                        I am a full-time masters student at UFPB, Currently researching HCI guidelines for accessible software aimed at people on the autism spectrum.
                     </p>
-                    <p>
-                    Get in touch or Follow me on: 
+                    <p className={styles.text}>
+                        Also, during my free time, I study web and mobile development to build cool projects like this blog and have fun.
                     </p>
-                    <ul>
+                    <p className={styles.text}>
+                        Get in touch via e-mail or Follow me on social media:
+                    </p>
+                    <ul className={styles.list}>
                         <li>
                             <Link href="https://www.linkedin.com/in/joao-rafael-silva/">
                                 <a>
@@ -35,7 +36,7 @@ const  Contact = () => {
                             </Link>
                             
                         </li>
-                        <li>
+                        <li className={styles.medium}>
                             <Link href="https://medium.com/@joao_rafael">
                                 <a>
                                     <img src="./icons/medium.svg"></img>

@@ -10,11 +10,13 @@ const Layout = ({children}) => {
             </main>
             <footer className={styles.footer}>
                 <h2>
-                    madeby<span>rafael</span>
+                    made<span>by</span><span>rafael</span>
                 </h2>
-                <p>
-                    developed by João Rafael under MIT License. The code for this website is avalaible at GitHub
-                </p>
+                <div className={styles.credits}>
+                    <p>
+                        Developed by João Rafael under MIT License. Made with React.js and Next.js.
+                    </p>
+                </div>
             </footer>
         </div>
     )

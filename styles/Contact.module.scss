@@ -58,7 +58,7 @@
                 left: -10px;
             }
 
-            h2 {
+            .title {
                 margin-top: 0px;
                 font-family: $roboto;
                 color: $color20;
@@ -68,7 +68,15 @@
                 }
             }
 
-            ul {
+            .text {
+                font-size: 16px;
+
+                a {
+                    color: $color20;
+                }
+            }
+
+            .list {
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
@@ -79,20 +87,26 @@
                 margin-bottom: 0px;
 
                 li {
+                    color: rgba($color20, 0.5);
                     margin: 0px 0px 0px 5px;
                     height: 15px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
 
-                    img {
-                        object-fit: contain;
-                        height: 20px;
-                        width: auto;
-                    }
+                    a {
+                        display: flex;
+                        padding: 2px;
 
-                    color: $color18;
-                    margin-bottom: 5px;
+                        img {
+                            height: 22px;
+                            width: 22px;
+                        }
+                    }
+                }
+
+                .medium {
+                    padding-top: 3px;
                 }
             }
 
