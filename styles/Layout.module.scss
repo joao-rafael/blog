@@ -132,7 +132,7 @@
     padding-top: 10px;
     display: flex;
     flex-direction: column;
-    background: $color20;
+    background: $color19;
     justify-content: center;
     align-items: center;
 
@@ -157,7 +157,8 @@
     .credits {
         padding-top: 4px;
         width: 100%;
-        background-color: rgba($color19, 0.5);
+        background-color: $color18;
+        
 
         p {
             margin-top: 0;
@@ -166,6 +167,21 @@
             text-align: center;
             color: $color10;
             margin-bottom: 2px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .credits {
+            p {
+
+                br{
+                    display: block;
+                }
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ const Layout = ({children}) => {
                 </h2>
                 <div className={styles.credits}>
                     <p>
-                        Developed by João Rafael under MIT License. Made with React.js and Next.js.
+                        Made with React.js and Next.js. <br></br> Developed by João Rafael under MIT License.
                     </p>
                 </div>
             </footer>

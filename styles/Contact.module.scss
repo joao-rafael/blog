@@ -14,12 +14,12 @@
         h2 {
             font-family: $montserrat;
             color: $color10;
-            font-size: 36px;
+            font-size: 28px;
         }
 
 
-        @media screen and (min-width:  1200px){
-            margin: 0px calc(120px + 10%);
+        @media screen and (min-width:  1281px){
+            margin: 0px calc(120px + 15%);
         }
     }
 
@@ -70,6 +70,9 @@
 
             .text {
                 font-size: 16px;
+                letter-spacing: 0.3px;
+                line-height: 140%;
+                color: $color20;
 
                 a {
                     color: $color20;
@@ -98,9 +101,13 @@
                         display: flex;
                         padding: 2px;
 
-                        img {
-                            height: 22px;
-                            width: 22px;
+                        svg {
+                            height: 20px;
+                            width: 20px;
+                        }
+
+                        &:hover {
+                            fill: $color20;
                         }
                     }
                 }
@@ -112,8 +119,74 @@
 
         }
 
-        @media screen and (min-width:  1200px){
-            margin: 0px calc(120px + 10%);
+        @media screen and (min-width:  1281px){
+            margin: 0px calc(120px + 15%);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+
+        .header {
+            margin: 0px 25px!important;
+
+            h2 {
+                font-family: $montserrat;
+                color: $color10;
+                font-size: 24px;
+                text-align: center;
+            }
+        }
+
+        .flex {
+            margin: 0px 25px!important;
+            flex-direction: column;
+            align-items: center;
+
+            .photo {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+    
+                picture {
+                    img {
+                        margin: 0px auto;
+                        object-fit: cover;
+                        object-position: center;
+                        height: 150px;
+                        width: 150px;
+                        border-radius: 150px;
+                        border: 3px solid rgba($color10, 0.6);
+                    }
+                }
+            }
+
+            .info {
+                margin-top: 25px;
+                text-align: center;
+
+                .title {
+                    font-size: 22px;
+                }
+
+                .list {
+                    justify-content: center;
+
+                }
+
+                &::before {
+                    height: 30px;
+                    transform: rotate(45deg);
+                    width: 30px;
+                    background-color: $color10;
+                    content: "";
+                    position: absolute;
+                    top: -15px;
+                    left: calc(50% - 15px);
+                }
+            }
         }
     }
 }

@@ -5,6 +5,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import path from 'path';
 import styles from '../styles/Post.module.scss'
+import Contact from '../components/Contact'
+
 
 const Post = ({htmlStr, data}) => {
     return (
@@ -36,9 +38,9 @@ const Post = ({htmlStr, data}) => {
                     </a>
                 </Link>
             </article>
-            
-            
-            
+
+            <Contact>
+            </Contact>
         </div>
         
     )
