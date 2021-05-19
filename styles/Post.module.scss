@@ -59,7 +59,7 @@
                 border-radius: 8px;
                 background: $color18;
                 width: 100%;
-                margin: 20px auto;
+                margin: 20px auto 7px auto;
                 padding: 20px 30px 20px 30px;
             }
             
@@ -70,19 +70,16 @@
                 font-size: 20px;
                 letter-spacing: 0.3px;
                 line-height: 140%;
+                text-align: justify;
                 font-family: $roboto;
 
+                a {
+                    color: $color21;
+                }
+
                 &:nth-of-type(2n){
-                    &::first-letter{
-                        color: $color20;
-                        font-weight: bold;
-                        initial-letter: 2;
-                        float: left;
-                        font-size: 55px;
-                        line-height: 25px;
-                        padding-top: 12px;
-                        padding-right: 4px;
-                        padding-left: 3px;
+                    &:first-of-type {
+                        
                     }
                 }
 
@@ -107,6 +104,8 @@
                     color: $color17;
                     font-size: 18px;
                 }
+
+                
             }
     
             h1,
@@ -115,7 +114,7 @@
             h4, 
             h5, 
             h6 {
-                padding-top: 20px;
+                padding-top: 0px;
                 font-size: 28px;
                 font-family: $montserrat;
                 color: $color20;
@@ -189,10 +188,12 @@
 
             header {
                 width: 100%;
-                margin-top: 380px;
-                margin-bottom: 20px;
+                margin-top: 420px;
+                margin-bottom: 10px;
+                text-align: center;
 
                 h1 {
+                    text-align: center;
                     font-size: 30px;
                 }
     
@@ -233,8 +234,9 @@
                     color: $color20;
                     font-weight: bold;
                     font-size: 24px;
-                    text-align: left!important;
+                    text-align: center!important;
                     margin-right: auto;
+                    text-align: center;
                 }
     
                 pre {
@@ -258,6 +260,18 @@
                         height: 370px;
                         width: 100vh;
                         margin-top: 0px;
+                    }
+                }
+
+                blockquote {
+                    &:first-of-type {
+                        position: absolute;
+                        top: 416px;
+                        left: 0;
+                    }
+
+                    p {
+                        font-size: 16px;
                     }
                 }
             }

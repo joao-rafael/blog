@@ -6,15 +6,17 @@ const Header = () => {
         <header className={styles.header}>
             <div className={styles.brand}>
                 <Link href='/'>
-                    <a>
+                    <a title="Coding Bits, a web blog by João Rafael">
                         <h1>Coding Bits</h1>
                         <h2>by JoãoRafael</h2>
                     </a>
                 </Link>
             </div>
-            <button className={styles.btn}>
-                Contact
-            </button>
+            <Link  href="https://github.com/joao-rafael">
+                <a title="GitHub Profile" className={styles.btn}>
+                    GitHub
+                </a>
+            </Link>
         </header>
     )
 }

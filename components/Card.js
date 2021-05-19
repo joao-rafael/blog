@@ -5,7 +5,7 @@ const  Card = ({title, date, description, link}) => {
     return (
         <article className={styles.card}>
             <Link href={link} >
-                <a className={styles.clink}>
+                <a className={styles.clink} title={`Link to ${title} article`}>
                     <span className={styles.date}>{date}</span>
                     <h2 className={styles.title}>
                         {title}
