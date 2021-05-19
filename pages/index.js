@@ -22,7 +22,7 @@ export default function Home({ files }) {
         <div className={styles.welcome}>
           <div className={styles.content}>
             <h1 className={styles.title}>Coding Bits</h1>
-            <h2 className={styles.sub}>Insights about Technology, Programming and life itself.</h2>
+            <h2 className={styles.sub}>Welcome to just another blog about Technology, Programming and life itself.</h2>
           </div>
           <picture className={styles.pic}>
             <img src="./images/bg.png" alt="Background" />
@@ -36,10 +36,8 @@ export default function Home({ files }) {
             );
           })}
         </section>
-        
       </section>
       <Contact>
-          
       </Contact>
 
     </div>

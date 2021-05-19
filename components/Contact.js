@@ -64,7 +64,7 @@ const  Contact = () => {
                     </ul>
 
                     <p className={styles.text}>
-                        Or, Get in touch via e-mail: joaorafael.dev@outlook.com
+                        Or, Get in touch via e-mail: <a href="mailto:joaorafael.dev@outlook.com">joaorafael.dev@outlook.com</a>.
                     </p>
                 </div>
             </section>
