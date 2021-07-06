@@ -7,7 +7,7 @@
     border-radius: 4px;
     background-color: transparent;
     margin-bottom: 25px;
-    min-height: 100px;
+    min-height: 140px;
     transition: .2s ease;
     position: relative;
     display: block;
@@ -22,7 +22,8 @@
         height: 100%;
         top: 0;
         left: 0;
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
         
     }
 
@@ -36,6 +37,7 @@
         padding: 5px 4px;
         font-weight: 500;
         border-radius: 2px;
+        max-width: 110px;
     }
     
     .title {
