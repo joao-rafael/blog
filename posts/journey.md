@@ -15,7 +15,7 @@ Currently, I am finishing my first semester as a masters students (which was a f
 
 ## Studying and Choosing a Path
 
-Having a Front-End development background and some experience in mobile development, I am currently studying about native Android Development and about React.js/React Native - Which one I will choose to follow later on? Only time will tell me, for now I'm enjoying to learn about both. I'm doing this because I think it's important to know 
+Having a Front-End development background and some experience in mobile development, I am currently studying about native Android Development and about React.js/React Native - Which one I will choose to follow later on? Only time will tell me, for now I'm enjoying to learn about both. 
 
 ## Building A Portfolio
 
