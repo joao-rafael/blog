@@ -1,8 +1,142 @@
-@import './typography.scss';
-@import './colors.scss';
-
 .home {
-    padding-top: 30px;
-    background: linear-gradient(180deg, rgba(241, 232, 147, 0.07) 0%, rgba(196, 196, 196, 0) 100%);
-    box-shadow: inset 0px 5px 9px -5px rgba(0, 0, 0, 0.25);
+  padding-bottom: 4rem;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.heroSection {
+  margin-top: 1rem;
+}
+
+.heroCard {
+  position: relative;
+  display: block;
+  min-height: clamp(21rem, 52vw, 31rem);
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--card-border);
+  isolation: isolate;
+  backdrop-filter: blur(10px) saturate(118%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.03));
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(4, 12, 34, 0.26) 0%, rgba(4, 12, 34, 0.02) 46%),
+    linear-gradient(180deg, rgba(4, 12, 34, 0.04) 0%, rgba(4, 12, 34, 0.44) 100%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(6px) saturate(112%);
+}
+
+.heroGlass {
+  position: absolute;
+  left: clamp(1rem, 4vw, 2.2rem);
+  right: clamp(1rem, 4vw, 2.2rem);
+  bottom: clamp(1rem, 4vw, 2rem);
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+  color: #fff;
+  max-width: min(38rem, 100%);
+  box-shadow: none;
+
+  h1 {
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.55rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+
+  p {
+    margin: 0.8rem 0 0;
+    max-width: 32rem;
+    font-size: clamp(1rem, 1.7vw, 1.14rem);
+    color: rgba(255, 255, 255, 0.88);
+  }
+}
+
+.heroTag,
+.heroMeta {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.96);
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(16px);
+}
+
+.heroMeta {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.postsSection {
+  margin-top: 2.2rem;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  &::after {
+    content: '';
+    flex: 1;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--line);
+  }
+}
+
+.postlist {
+  display: grid;
+  gap: 1.3rem;
+}
+
+.contactWrap {
+  margin-top: 2.6rem;
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: min(1120px, calc(100% - 1.5rem));
+  }
+
+  .heroCard {
+    min-height: 23rem;
+    border-radius: 1.5rem;
+  }
+
+  .heroGlass {
+    max-width: none;
+    border-radius: 1.25rem;
+  }
 }

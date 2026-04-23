@@ -1,7 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root,
+html[data-theme='dark'] {
+  --bg: #0c2147;
+  --bg-rgb: 12, 33, 71;
+  --surface: rgba(99, 113, 145, 0.34);
+  --surface-strong: rgba(121, 136, 173, 0.48);
+  --surface-soft: rgba(255, 255, 255, 0.08);
+  --card: rgba(113, 126, 160, 0.2);
+  --card-border: rgba(255, 255, 255, 0.16);
+  --text: #f8fbff;
+  --text-soft: rgba(234, 239, 248, 0.84);
+  --text-muted: rgba(219, 228, 242, 0.68);
+  --accent: #d8e6ff;
+  --accent-strong: #ffd43d;
+  --line: rgba(244, 247, 252, 0.92);
+  --shadow: 0 30px 80px rgba(1, 12, 35, 0.38);
+}
+
+html[data-theme='light'] {
+  --bg: #edf3ff;
+  --bg-rgb: 237, 243, 255;
+  --surface: rgba(255, 255, 255, 0.62);
+  --surface-strong: rgba(255, 255, 255, 0.82);
+  --surface-soft: rgba(16, 43, 86, 0.06);
+  --card: rgba(255, 255, 255, 0.58);
+  --card-border: rgba(29, 54, 92, 0.14);
+  --text: #112445;
+  --text-soft: rgba(17, 36, 69, 0.82);
+  --text-muted: rgba(17, 36, 69, 0.62);
+  --accent: #244f97;
+  --accent-strong: #db9e00;
+  --line: rgba(17, 36, 69, 0.88);
+  --shadow: 0 26px 60px rgba(26, 53, 100, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(62, 104, 187, 0.26), transparent 30%),
+    radial-gradient(circle at right center, rgba(255, 211, 61, 0.18), transparent 24%),
+    linear-gradient(180deg, rgba(var(--bg-rgb), 0.98), var(--bg));
+  color: var(--text);
+  font-family: 'Ubuntu', sans-serif;
+  transition:
+    background 220ms ease,
+    color 220ms ease;
 }
 
 a {
@@ -9,6 +63,72 @@ a {
   text-decoration: none;
 }
 
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 * {
   box-sizing: border-box;
+}
+
+*::selection {
+  background: rgba(216, 230, 255, 0.22);
+}
+
+.pageTransition {
+  width: 100%;
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    filter 220ms ease;
+  will-change: opacity, transform, filter;
+}
+
+.pageTransition--exiting {
+  opacity: 0;
+  transform: translateY(12px);
+  filter: blur(4px);
+}
+
+.pageTransition--entering {
+  opacity: 0;
+  transform: translateY(12px);
+  filter: blur(4px);
+  animation: page-fade-in 280ms ease forwards;
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pageTransition,
+  .pageTransition--exiting,
+  .pageTransition--entering {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
 }

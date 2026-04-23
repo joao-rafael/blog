@@ -1,193 +1,134 @@
-@import './typography.scss';
-@import './colors.scss';
-
 .contact {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1rem 0 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.4rem;
+  color: var(--text);
+
+  span {
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  h2 {
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1;
+  }
+}
+
+.flex {
+  display: grid;
+  grid-template-columns: minmax(14rem, 20rem) 1fr;
+  gap: 1.4rem;
+}
+
+.photo {
+  overflow: hidden;
+  border-radius: 1.75rem;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  min-height: 100%;
+
+  img {
     width: 100%;
-    padding-bottom: 25px;
-    background-color: $color21;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
-    .header {
-        margin: 0px 120px;
+.info {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 1.75rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(22px);
+  padding: 1.5rem;
+}
 
-        h2 {
-            font-family: $montserrat;
-            color: $color10;
-            font-size: 28px;
-        }
+.title {
+  margin: 0 0 1rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1;
+  color: var(--text);
 
+  span {
+    color: var(--accent-strong);
+  }
+}
 
-        @media screen and (min-width:  1281px){
-            margin: 0px calc(120px + 10%);
-        }
-    }
+.text {
+  margin: 0 0 1rem;
+  color: var(--text-soft);
+  line-height: 1.6;
 
-    .flex {
-        margin: 0px 120px;
-        display: flex;
-        flex-direction: row;
+  a {
+    color: var(--accent);
+    font-weight: 700;
+  }
+}
 
-        .photo {
-            width: 35%;
+.contactBlock {
+  margin-top: 1.25rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--card-border);
+}
 
-            picture {
-                img {
-                    object-fit: cover;
-                    height: 100%;
-                    border-radius: 4px;
-                }
-            }
-        }
+.list {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 1rem;
+}
 
-        .info {
-            font-family: $roboto;
-            background-color: $color10;
-            border-radius: 4px;
-            padding: 20px 25px 0px 25px;
-            position: relative;
+.list li a {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-strong);
+  border: 1px solid var(--card-border);
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
 
-            &::before {
-                height: 30px;
-                transform: rotate(45deg);
-                width: 30px;
-                background-color: $color10;
-                content: "";
-                position: absolute;
-                top: 20px;
-                left: -10px;
-            }
+  &:hover {
+    transform: translateY(-2px);
+    background: var(--surface);
+  }
 
-            .title {
-                margin-top: 0px;
-                font-family: $roboto;
-                color: $color20;
+  svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: var(--text);
+  }
+}
 
-                span {
-                    color: $color21;
-                }
-            }
+@media (max-width: 720px) {
+  .contact {
+    width: min(1120px, calc(100% - 1.5rem));
+  }
 
-            .text {
-                font-size: 16px;
-                letter-spacing: 0.3px;
-                line-height: 140%;
-                color: $color20;
+  .flex {
+    grid-template-columns: 1fr;
+  }
 
-                a {
-                    color: $color20;
-                }
-            }
-
-            .list {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                justify-items: center;
-                list-style-type: none;
-                padding-left: 0;
-                margin-bottom: 0px;
-
-                li {
-                    color: rgba($color20, 0.5);
-                    margin: 0px 0px 0px 5px;
-                    height: 15px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    a {
-                        display: flex;
-                        padding: 2px;
-
-                        svg {
-                            height: 20px;
-                            width: 20px;
-                        }
-
-                        &:hover {
-                            fill: $color20;
-                        }
-                    }
-                }
-
-                .medium {
-                    padding-top: 3px;
-                }
-            }
-
-        }
-
-        @media screen and (min-width:  1281px){
-            margin: 0px calc(120px + 10%);
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        flex-direction: column;
-
-        .header {
-            margin: 0px 25px!important;
-
-            h2 {
-                font-family: $montserrat;
-                color: $color10;
-                font-size: 24px;
-                text-align: center;
-            }
-        }
-
-        .flex {
-            margin: 0px 25px!important;
-            flex-direction: column;
-            align-items: center;
-
-            .photo {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                align-content: center;
-                justify-content: center;
-    
-                picture {
-                    img {
-                        margin: 0px auto;
-                        object-fit: cover;
-                        object-position: center;
-                        height: 150px;
-                        width: 150px;
-                        border-radius: 150px;
-                        border: 3px solid rgba($color10, 0.6);
-                    }
-                }
-            }
-
-            .info {
-                margin-top: 25px;
-                text-align: center;
-
-                .title {
-                    font-size: 22px;
-                }
-
-                .list {
-                    justify-content: center;
-
-                }
-
-                &::before {
-                    height: 30px;
-                    transform: rotate(45deg);
-                    width: 30px;
-                    background-color: $color10;
-                    content: "";
-                    position: absolute;
-                    top: -15px;
-                    left: calc(50% - 15px);
-                }
-            }
-        }
-    }
+  .photo {
+    max-height: 20rem;
+  }
 }
