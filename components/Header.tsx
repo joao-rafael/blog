@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import styles from '../styles/Header.module.scss';
 import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
+  const router = useRouter();
   const [isDark, setIsDark] = useState(true);
+  const isArticlePage = router.pathname === '/[slug]';
 
   useEffect(() => {
     const storedTheme = window.localStorage.getItem('coding-bits-theme');
@@ -25,7 +28,7 @@ const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isArticlePage ? styles.compact : ''}`}>
       <Link href="/" title="Coding Bits, a web blog by João Rafael" className={styles.brand}>
         <div>
           <span className={styles.eyebrow}>Personal notes on code and craft</span>

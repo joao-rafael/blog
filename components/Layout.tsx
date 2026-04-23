@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { useRouter } from 'next/router';
 
 import Header from './Header';
 import styles from '../styles/Layout.module.scss';
@@ -8,8 +9,11 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps) => {
+  const router = useRouter();
+  const isArticlePage = router.pathname === '/[slug]';
+
   return (
-    <div className={styles.Layout}>
+    <div className={`${styles.Layout} ${isArticlePage ? styles.articleLayout : ''}`}>
       <Header />
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>

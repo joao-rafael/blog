@@ -5,15 +5,17 @@
 .article {
   width: min(1120px, calc(100% - 2rem));
   margin: 0 auto;
+  padding-top: 0.75rem;
 }
 
 .coverFrame {
   position: relative;
-  min-height: clamp(18rem, 44vw, 28rem);
+  min-height: clamp(20rem, calc(100vh - 11rem), 34rem);
   overflow: hidden;
   border-radius: 2rem;
   border: 1px solid var(--card-border);
   box-shadow: var(--shadow);
+  animation: cover-grow-in 420ms ease both;
 }
 
 .coverImage {
@@ -170,10 +172,14 @@
 }
 
 .link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.55rem;
   margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
   padding: 0.8rem 1.15rem;
   border-radius: 999px;
   background: var(--surface);
@@ -196,13 +202,26 @@
   }
 }
 
+@keyframes cover-grow-in {
+  from {
+    opacity: 0.72;
+    transform: scale(0.97) translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 @media (max-width: 720px) {
   .article {
     width: min(1120px, calc(100% - 1.5rem));
+    padding-top: 0.5rem;
   }
 
   .coverFrame {
-    min-height: 16rem;
+    min-height: min(44vh, 19rem);
     border-radius: 1.5rem;
   }
 
